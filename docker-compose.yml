@@ -1,0 +1,15 @@
+# For copypasta: docker-compose up --build -d
+# Have Fun!
+---
+version: '3'
+services:
+  helloflask:
+    build: helloflask
+    image: helloflask
+    container_name: helloflask
+    ports:
+    - '8080:5000/tcp'
+    environment:
+    - TZ="America/New_York"
+    restart: always
+
