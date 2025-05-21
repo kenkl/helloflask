@@ -10,4 +10,8 @@ The Docker host (or wherever you build the image) will need docker-compose to bu
 docker run -d -p 8080:5000 --name=helloflask kenkl/helloflask
 ```
 
+2025-05-21: After all these years, I've _finally_ touched helloflask.py to accept an environment variable, to include a value in the greeting string that's returned when calling helloflask. This should work (I've updated the image stored in my DockerHub):
 
+```
+docker run -d -e MYSERVERNAME="My Server Name" -p 8080:5000 --name=helloflask kenkl/helloflask
+```

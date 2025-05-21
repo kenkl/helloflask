@@ -1,4 +1,5 @@
 from flask import Flask
+import os
 
 hitcount = 0
 app = Flask(__name__)
@@ -6,9 +7,13 @@ app = Flask(__name__)
 @app.route('/')
 
 def index():
+    try:
+        servername = os.environ['MYSERVERNAME']
+    except KeyError:
+        servername = '[MYSERVERNAME undefined]'
     global hitcount
     hitcount += 1
-    message = f"Hello from Flask, running on [insert server name]!   {hitcount}   \n\n"
+    message = f"Hello from Flask, running on {servername}!   {hitcount}   \n\n"
 
     return message
 
