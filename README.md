@@ -15,3 +15,6 @@ docker run -d -p 8080:5000 --name=helloflask kenkl/helloflask
 ```
 docker run -d -e MYSERVERNAME="My Server Name" -p 8080:5000 --name=helloflask kenkl/helloflask
 ```
+
+2026-04-23: Updated the Dockerfile to use a more current/modern version of Python and Alpine for the base. 
+

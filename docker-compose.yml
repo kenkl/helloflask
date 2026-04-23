@@ -1,4 +1,4 @@
-# For copypasta: docker-compose up --build -d
+# For copypasta: docker compose up --build -d
 # Have Fun!
 ---
 version: '3'

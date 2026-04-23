@@ -1,4 +1,4 @@
-FROM python:3.9.2-alpine3.13
+FROM python:3.14.4-alpine3.22
 RUN apk --no-cache add tzdata
 RUN pip install Flask
 RUN cp /usr/share/zoneinfo/America/New_York  /etc/localtime
