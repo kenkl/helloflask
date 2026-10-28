@@ -3,6 +3,7 @@
 ---
 services:
   helloflask:
+    platform: linux/amd64
     build: helloflask
     image: helloflask
     container_name: helloflask
