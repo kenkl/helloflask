@@ -1,5 +1,5 @@
-FROM python:3.14.4-alpine3.22
-RUN apk --no-cache add tzdata
+FROM python:3.15.2-alpine3.23
+RUN apk --no-cache add tzdata curl
 RUN pip install Flask
 RUN cp /usr/share/zoneinfo/America/New_York  /etc/localtime
 COPY helloflask.py /helloflask.py
